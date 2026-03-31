@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onnx_sample_app/onnxruntime_page.dart';
+import 'package:onnx_sample_app/constants.dart';
+import 'package:onnx_sample_app/pages/onnxruntime_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'XGBoost Model',
+      title: AppConstants.appTitle,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const OnnxRuntimePage(),
+    );
+  }
+}
     );
   }
 }
